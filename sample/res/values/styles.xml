@@ -1,0 +1,10 @@
+<resources>
+
+	<style name="AppBaseTheme" parent="android:Theme.Light">
+	</style>
+
+	<!-- Application theme. -->
+	<style name="AppTheme" parent="AppBaseTheme">
+	</style>
+
+</resources>
