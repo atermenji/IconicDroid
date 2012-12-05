@@ -38,6 +38,7 @@ import com.atermenji.android.iconictextview.icon.EntypoIcon;
 import com.atermenji.android.iconictextview.icon.EntypoSocialIcon;
 import com.atermenji.android.iconictextview.icon.FontAwesomeIcon;
 import com.atermenji.android.iconictextview.icon.Icon;
+import com.atermenji.android.iconictextview.icon.IconicIcon;
 
 public class SimpleSampleActivity extends Activity {
 
@@ -71,6 +72,7 @@ public class SimpleSampleActivity extends Activity {
         icons.addAll(Arrays.asList(EntypoIcon.values()));
         icons.addAll(Arrays.asList(EntypoSocialIcon.values()));
         icons.addAll(Arrays.asList(FontAwesomeIcon.values()));
+        icons.addAll(Arrays.asList(IconicIcon.values()));
         
         final ArrayAdapter<Icon> adapter = 
                 new ArrayAdapter<Icon>(this, android.R.layout.simple_spinner_item, icons);
