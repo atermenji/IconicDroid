@@ -32,6 +32,7 @@ import android.widget.TextView;
 import com.atermenji.android.iconictextview.IconicTextView;
 import com.atermenji.android.iconictextview.icon.EntypoIcon;
 import com.atermenji.android.iconictextview.icon.EntypoSocialIcon;
+import com.atermenji.android.iconictextview.icon.FontAwesomeIcon;
 import com.atermenji.android.iconictextview.icon.Icon;
 
 public class TypefaceSampleActivity extends ListActivity {
@@ -40,6 +41,7 @@ public class TypefaceSampleActivity extends ListActivity {
     
     public static final int ICON_TYPE_ENTYPO = 1001;
     public static final int ICON_TYPE_ENTYPO_SOCIAL = 1002;
+    public static final int ICON_TYPE_FONT_AWESOME = 1003;
     
     public static Intent createIntent(final Context context, final int iconType) {
         Intent intent = new Intent(context, TypefaceSampleActivity.class);
@@ -68,6 +70,11 @@ public class TypefaceSampleActivity extends ListActivity {
             case ICON_TYPE_ENTYPO_SOCIAL: {
                 valuesArray = EntypoSocialIcon.values();
                 setTitle("Entypo-Social");
+                break;
+            }
+            case ICON_TYPE_FONT_AWESOME: {
+                valuesArray = FontAwesomeIcon.values();
+                setTitle("Font Awesome");
                 break;
             }
         }

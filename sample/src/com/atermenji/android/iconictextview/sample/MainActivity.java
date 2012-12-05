@@ -60,6 +60,13 @@ public class MainActivity extends ListActivity {
                         TypefaceSampleActivity.ICON_TYPE_ENTYPO_SOCIAL));
             }
         }));
+        sampleItems.add(new SampleItem("Font Awesome icons", new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(TypefaceSampleActivity.createIntent(MainActivity.this,
+                        TypefaceSampleActivity.ICON_TYPE_FONT_AWESOME));
+            }
+        }));
 
         SamplesAdapter adapter = new SamplesAdapter(this, sampleItems);
         getListView().setAdapter(adapter);
