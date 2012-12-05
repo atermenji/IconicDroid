@@ -42,7 +42,8 @@ public class TypefaceManager {
     public enum IconicTypeface {
 
         ENTYPO(R.raw.entypo), 
-        ENTYPO_SOCIAL(R.raw.entypo_social);
+        ENTYPO_SOCIAL(R.raw.entypo_social),
+        FONT_AWESOME(R.raw.font_awesome);
 
         private final int mTypefaceResourceId;
         private Typeface mTypeface;
