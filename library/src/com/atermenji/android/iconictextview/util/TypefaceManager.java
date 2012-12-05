@@ -30,7 +30,7 @@ import android.util.Log;
 import com.atermenji.android.iconictextview.R;
 
 /**
- * Helper class that wraps iconic fonts and manages {@link Typeface} loading.
+ * Helper class that wraps icon fonts and manages {@link Typeface} loading.
  */
 public class TypefaceManager {
 
@@ -54,7 +54,7 @@ public class TypefaceManager {
         }
 
         /**
-         * Loads a {@link Typeface} for the given iconic font. 
+         * Loads a {@link Typeface} for the given icon font. 
          * {@link Typeface} is loaded only once to avoid memory consumption.
          * 
          * @param context

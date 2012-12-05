@@ -22,7 +22,7 @@ import android.widget.TextView;
 import com.atermenji.android.iconictextview.icon.Icon;
 
 /**
- * A custom {@link TextView} which can display icons from iconic fonts. 
+ * A custom {@link TextView} which can display icons from icon fonts. 
  */
 public class IconicTextView extends TextView {
 

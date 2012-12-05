@@ -3,7 +3,7 @@ package com.atermenji.android.iconictextview.icon;
 import com.atermenji.android.iconictextview.util.TypefaceManager.IconicTypeface;
 
 /**
- * A wrapper for Font Awesome iconic font (http://fortawesome.github.com/Font-Awesome/). 
+ * A wrapper for Font Awesome icon font (http://fortawesome.github.com/Font-Awesome/). 
  */
 public enum FontAwesomeIcon implements Icon {
     

@@ -20,7 +20,7 @@ import android.graphics.Typeface;
 import com.atermenji.android.iconictextview.util.TypefaceManager.IconicTypeface;
 
 /**
- * An interface which every iconic font wrapper should implement.
+ * An interface which every icon font wrapper should implement.
  */
 public interface Icon {
 

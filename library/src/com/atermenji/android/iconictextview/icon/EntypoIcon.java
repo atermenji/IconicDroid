@@ -18,7 +18,7 @@ package com.atermenji.android.iconictextview.icon;
 import com.atermenji.android.iconictextview.util.TypefaceManager.IconicTypeface;
 
 /**
- * A wrapper for Entypo iconic font (http://www.entypo.com). 
+ * A wrapper for Entypo icon font (http://www.entypo.com). 
  */
 public enum EntypoIcon implements Icon {
 
