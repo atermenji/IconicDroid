@@ -43,7 +43,8 @@ public class TypefaceManager {
 
         ENTYPO(R.raw.entypo), 
         ENTYPO_SOCIAL(R.raw.entypo_social),
-        FONT_AWESOME(R.raw.font_awesome);
+        FONT_AWESOME(R.raw.font_awesome),
+        ICONIC(R.raw.iconic);
 
         private final int mTypefaceResourceId;
         private Typeface mTypeface;
