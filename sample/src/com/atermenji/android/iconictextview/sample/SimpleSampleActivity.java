@@ -21,19 +21,19 @@ import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.atermenji.android.iconictextview.IconicTextView;
+import com.atermenji.android.iconictextview.IconicFontDrawable;
 import com.atermenji.android.iconictextview.icon.EntypoIcon;
 import com.atermenji.android.iconictextview.icon.EntypoSocialIcon;
 import com.atermenji.android.iconictextview.icon.FontAwesomeIcon;
@@ -45,11 +45,13 @@ public class SimpleSampleActivity extends Activity {
     private static final int ICON_SIZE_MAX = 500;
     private static final int ICON_SIZE_DEFAULT = 300;
 
-    private IconicTextView mIconicTextView;
+    private ImageButton mIconButton;
     private Spinner mIconsSpinner;
     private SeekBar mSizeSeekBar;
     private Button mChangeColorButton;
     private TextView mCurSizeTextView;
+    
+    private IconicFontDrawable mIconicFontDrawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +60,7 @@ public class SimpleSampleActivity extends Activity {
         setTitle("Simple Sample");
         setContentView(R.layout.activity_simple_sample);
 
-        mIconicTextView = (IconicTextView) findViewById(R.id.itv_icon);
+        mIconButton = (ImageButton) findViewById(R.id.bt_icon);
         mIconsSpinner = (Spinner) findViewById(R.id.sp_icons);
         mSizeSeekBar = (SeekBar) findViewById(R.id.sb_size);
         mChangeColorButton = (Button) findViewById(R.id.bt_change_color);
@@ -68,6 +70,9 @@ public class SimpleSampleActivity extends Activity {
     }
 
     private void initSimpleSample() {
+        mIconicFontDrawable = new IconicFontDrawable(this);
+        mIconButton.setImageDrawable(mIconicFontDrawable);
+        
         List<Icon> icons = new ArrayList<Icon>();
         icons.addAll(Arrays.asList(EntypoIcon.values()));
         icons.addAll(Arrays.asList(EntypoSocialIcon.values()));
@@ -83,15 +88,15 @@ public class SimpleSampleActivity extends Activity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 Icon icon = adapter.getItem(pos);
-                mIconicTextView.setIcon(icon);
+                mIconicFontDrawable.setIcon(icon);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
         
-        mIconicTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, ICON_SIZE_DEFAULT);
-        mIconicTextView.setTextColor(Utils.randomColor());
+        mIconicFontDrawable.setIconSize(ICON_SIZE_DEFAULT);
+        mIconicFontDrawable.setIconColor(Utils.randomColor());
 
         mCurSizeTextView.setText("Size: " + ICON_SIZE_DEFAULT);
         
@@ -106,7 +111,7 @@ public class SimpleSampleActivity extends Activity {
             }
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                mIconicTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, progress);
+                mIconicFontDrawable.setIconSize(progress);
                 mCurSizeTextView.setText("Size: " + progress);
             }
         });
@@ -114,7 +119,7 @@ public class SimpleSampleActivity extends Activity {
         mChangeColorButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                mIconicTextView.setTextColor(Utils.randomColor());
+                mIconicFontDrawable.setIconColor(Utils.randomColor());
             }
         });
     }
