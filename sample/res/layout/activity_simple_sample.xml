@@ -26,14 +26,14 @@
 		android:layout_height="0dp"
 		android:layout_weight="0.1" />
 
-	<com.atermenji.android.iconictextview.IconicTextView
-		android:id="@+id/itv_icon"
+	<ImageButton 
+		android:id="@+id/bt_icon"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_weight="0.8"
-		android:gravity="center_horizontal|top"
-		android:textSize="600sp" />
-
+		android:gravity="center"
+		android:scaleType="fitCenter" />
+	
 	<TextView
 		android:id="@+id/tv_size"
 		android:layout_width="match_parent"
