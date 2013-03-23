@@ -29,6 +29,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.atermenji.android.iconictextview.IconicFontDrawable;
 import com.atermenji.android.iconictextview.IconicTextView;
 import com.atermenji.android.iconictextview.icon.EntypoIcon;
 import com.atermenji.android.iconictextview.icon.EntypoSocialIcon;
@@ -112,23 +113,26 @@ public class TypefaceSampleActivity extends ListActivity {
                 convertView = mInflater.inflate(R.layout.list_item_iconic, null);
                 holder = new ViewHolder();
                 holder.title = (TextView) convertView.findViewById(R.id.tv_title);
-                holder.icon = (IconicTextView) convertView.findViewById(R.id.itv_icon);
+                holder.icon = convertView.findViewById(R.id.view_icon);
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
             }
             
             holder.title.setText(icon.toString());
-            holder.icon.setIcon(icon);
-            holder.icon.setTextColor(Utils.randomColor());
-            
+
+            IconicFontDrawable iconicFontDrawable = new IconicFontDrawable(getContext());
+            iconicFontDrawable.setIcon(icon);
+            iconicFontDrawable.setIconColor(Utils.randomColor());
+            holder.icon.setBackground(iconicFontDrawable);
+
             return convertView;
         }
         
         private class ViewHolder {
             
             public TextView title;
-            public IconicTextView icon;
+            public View icon;
             
         }
     }

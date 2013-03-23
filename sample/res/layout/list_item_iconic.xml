@@ -28,13 +28,12 @@
 		android:layout_marginLeft="5dp"
 		android:textSize="20sp" />
 
-	<com.atermenji.android.iconictextview.IconicTextView
-		android:id="@+id/itv_icon"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignParentRight="true"
-		android:layout_centerVertical="true"
-		android:layout_marginRight="5dp"
-		android:textSize="50sp" />
+    <View
+        android:id="@+id/view_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"/>
 
 </RelativeLayout>
