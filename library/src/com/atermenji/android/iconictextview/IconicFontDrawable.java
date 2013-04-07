@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2012 Artur Termenji
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.atermenji.android.iconictextview;
 
 import android.content.Context;
@@ -6,6 +21,9 @@ import android.graphics.drawable.Drawable;
 
 import com.atermenji.android.iconictextview.icon.Icon;
 
+/**
+ * A custom {@link Drawable} which can display icons from icon fonts.
+ */
 public class IconicFontDrawable extends Drawable {
 
     private Context mContext;
@@ -39,44 +57,83 @@ public class IconicFontDrawable extends Drawable {
         mPathBounds = new RectF();
         mPaddingBounds = new Rect();
     }
-    
+
     public IconicFontDrawable(Context context, final Icon icon) {
         this(context);
         updateIcon(icon);
     }
-    
+
+    /**
+     * Loads and draws given {@link Icon}.
+     *
+     * @param icon
+     */
     public void setIcon(final Icon icon) {
         updateIcon(icon);
         invalidateSelf();
     }
 
+    /**
+     * Set a color for the {@link Icon}.
+     *
+     * @param color
+     */
     public void setIconColor(int color) {
         mIconPaint.setColor(color);
         invalidateSelf();
     }
 
+    /**
+     * Set a padding for the {@link Icon}.
+     *
+     * @param iconPadding
+     */
     public void setIconPadding(int iconPadding) {
         mIconPadding = iconPadding + mContourWidth;
         invalidateSelf();
     }
 
+    /**
+     * Set contour params for the {@link Icon}.
+     * You should call {@link #drawContour(boolean)} method to enable contour.
+     *
+     * @param contourColor
+     * @param contourWidth
+     */
     public void setContour(int contourColor, int contourWidth) {
         setContourColor(contourColor);
         setContourWidth(contourWidth);
         invalidateSelf();
     }
 
+    /**
+     * Set contour color for the {@link Icon}.
+     * You should call {@link #drawContour(boolean)} method to enable contour.
+     *
+     * @param contourColor
+     */
     public void setContourColor(int contourColor) {
         mContourPaint.setColor(contourColor);
         invalidateSelf();
     }
 
+    /**
+     * Set contour width for the {@link Icon}.
+     * You should call {@link #drawContour(boolean)} method to enable contour.
+     *
+     * @param contourWidth
+     */
     public void setContourWidth(int contourWidth) {
         mContourWidth = contourWidth;
         mContourPaint.setStrokeWidth(mContourWidth);
         invalidateSelf();
     }
 
+    /**
+     * Enable/disable contour drawing.
+     *
+     * @param drawStroke
+     */
     public void drawContour(boolean drawStroke) {
         mDrawContour = drawStroke;
 
