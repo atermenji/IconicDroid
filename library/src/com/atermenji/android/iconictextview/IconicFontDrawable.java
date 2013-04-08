@@ -89,7 +89,11 @@ public class IconicFontDrawable extends Drawable {
      * @param iconPadding
      */
     public void setIconPadding(int iconPadding) {
-        mIconPadding = iconPadding + mContourWidth;
+        mIconPadding = iconPadding;
+        if (mDrawContour) {
+            mIconPadding += mContourWidth;
+        }
+
         invalidateSelf();
     }
 
