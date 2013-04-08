@@ -19,10 +19,12 @@ import android.graphics.Typeface;
 
 import com.atermenji.android.iconictextview.util.TypefaceManager.IconicTypeface;
 
+import java.io.Serializable;
+
 /**
  * An interface which every icon font wrapper should implement.
  */
-public interface Icon {
+public interface Icon extends Serializable {
 
     /**
      * Gets a {@link Typeface} for an Icon.
