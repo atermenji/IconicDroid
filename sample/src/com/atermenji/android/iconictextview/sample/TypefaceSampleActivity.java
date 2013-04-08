@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.atermenji.android.iconictextview.IconicFontDrawable;
@@ -30,7 +31,9 @@ public class TypefaceSampleActivity extends ListActivity {
     public static final int ICON_TYPE_ENTYPO_SOCIAL = 1002;
     public static final int ICON_TYPE_FONT_AWESOME = 1003;
     public static final int ICON_TYPE_ICONIC = 1004;
-    
+
+    private SampleIconsAdapter mAdapter;
+
     public static Intent createIntent(final Context context, final int iconType) {
         Intent intent = new Intent(context, TypefaceSampleActivity.class);
         intent.putExtra(EXTRA_ICON_TYPE, iconType);
@@ -43,6 +46,13 @@ public class TypefaceSampleActivity extends ListActivity {
         
         int iconType = getIntent().getExtras().getInt(EXTRA_ICON_TYPE);
         initIconsList(iconType);
+    }
+
+    @Override
+    protected void onListItemClick(ListView listView, View view, int position, long id) {
+        super.onListItemClick(listView, view, position, id);
+        Icon icon = (Icon) listView.getAdapter().getItem(position);
+        startActivity(SimpleSampleActivity.createIntent(this, icon));
     }
 
     private void initIconsList(int iconType) {
@@ -74,8 +84,8 @@ public class TypefaceSampleActivity extends ListActivity {
         
         values.addAll(Arrays.asList(valuesArray));
         
-        SampleIconsAdapter adapter = new SampleIconsAdapter(this, values);
-        getListView().setAdapter(adapter);
+        mAdapter = new SampleIconsAdapter(this, values);
+        getListView().setAdapter(mAdapter);
     }
     
     private class SampleIconsAdapter extends ArrayAdapter<Icon> {
