@@ -2,5 +2,6 @@
 <resources>
 
 	<string name="app_name">IconicTextViewSample</string>
+    <string name="title_simple_sample">Simple sample</string>
 
 </resources>

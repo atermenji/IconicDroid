@@ -26,6 +26,10 @@ public class SimpleSampleActivity extends Activity {
     private static final int ICON_PADDING_MAX = 500;
     private static final int ICON_CONTOUR_WIDTH = 10;
 
+    private static final int BUTTON_ICON_CONTOUR_WIDTH = 5;
+    private static final int BUTTON_ICON_INTRINSIC_WIDTH = 70;
+    private static final int BUTTON_ICON_INTRINSIC_HEIGHT = 70;
+
     private static final String EXTRA_ICON = "extra_icon";
 
     private View mIconView;
@@ -36,6 +40,8 @@ public class SimpleSampleActivity extends Activity {
     private CheckBox mDrawContourCheckBox;
     
     private IconicFontDrawable mIconicFontDrawable;
+    private IconicFontDrawable mIconicFontDrawableButton;
+
     private Icon mIcon;
 
     private boolean firstSelect;
@@ -50,7 +56,6 @@ public class SimpleSampleActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setTitle("Simple Sample");
         setContentView(R.layout.activity_simple_sample);
 
         mIconView = findViewById(R.id.view_icon);
@@ -70,16 +75,24 @@ public class SimpleSampleActivity extends Activity {
 
     private void initSimpleSample() {
         mIconicFontDrawable = new IconicFontDrawable(this);
+        mIconicFontDrawableButton = new IconicFontDrawable(this);
+
+        mIconicFontDrawableButton.setIntrinsicWidth(BUTTON_ICON_INTRINSIC_WIDTH);
+        mIconicFontDrawableButton.setIntrinsicHeight(BUTTON_ICON_INTRINSIC_HEIGHT);
+
         int sdk = android.os.Build.VERSION.SDK_INT;
         if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
             mIconView.setBackgroundDrawable(mIconicFontDrawable);
         } else {
-        	mIconView.setBackground(mIconicFontDrawable);
+            mIconView.setBackground(mIconicFontDrawable);
         }
-        
+
+        mChangeColorButton.setCompoundDrawablesWithIntrinsicBounds(
+                mIconicFontDrawableButton, null, null, null);
 
         if (mIcon != null) {
             mIconicFontDrawable.setIcon(mIcon);
+            mIconicFontDrawableButton.setIcon(mIcon);
             firstSelect = true;
         }
 
@@ -99,7 +112,12 @@ public class SimpleSampleActivity extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 if (!firstSelect) {
                     Icon icon = adapter.getItem(pos);
+
                     mIconicFontDrawable.setIcon(icon);
+                    mIconicFontDrawable.invalidateSelf();
+
+                    mIconicFontDrawableButton.setIcon(icon);
+                    mIconicFontDrawableButton.invalidateSelf();
                 } else {
                     firstSelect = false;
                 }
@@ -110,6 +128,7 @@ public class SimpleSampleActivity extends Activity {
         });
 
         mIconicFontDrawable.setIconColor(Utils.randomColor());
+        mIconicFontDrawableButton.setIconColor(Utils.randomColor());
 
         mCurPaddingTextView.setText("Padding: " + 0);
         
@@ -136,6 +155,9 @@ public class SimpleSampleActivity extends Activity {
             public void onClick(View v) {
                 mIconicFontDrawable.setIconColor(Utils.randomColor());
                 mIconicFontDrawable.setContourColor(Utils.randomColor());
+
+                mIconicFontDrawableButton.setIconColor(Utils.randomColor());
+                mIconicFontDrawableButton.setContourColor(Utils.randomColor());
             }
         });
 
@@ -144,9 +166,11 @@ public class SimpleSampleActivity extends Activity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     mIconicFontDrawable.setContour(Utils.randomColor(), ICON_CONTOUR_WIDTH);
+                    mIconicFontDrawableButton.setContour(Utils.randomColor(), BUTTON_ICON_CONTOUR_WIDTH);
                 }
 
                 mIconicFontDrawable.drawContour(isChecked);
+                mIconicFontDrawableButton.drawContour(isChecked);
             }
         });
     }
