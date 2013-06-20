@@ -255,7 +255,7 @@ public class IconicFontDrawable extends Drawable {
 
     private void offsetIcon(Rect viewBounds) {
         float startX = viewBounds.centerX() - (mPathBounds.width() / 2);
-        float offsetX = startX -mPathBounds.left;
+        float offsetX = startX - mPathBounds.left;
 
         float startY = viewBounds.centerY() - (mPathBounds.height() / 2);
         float offsetY = startY - (mPathBounds.top);
