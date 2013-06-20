@@ -39,6 +39,9 @@ public class IconicFontDrawable extends Drawable {
     private int mIconPadding;
     private int mContourWidth;
 
+    private int mIntrinsicWidth;
+    private int mIntrinsicHeight;
+
     private boolean mDrawContour;
 
     private Icon mIcon;
@@ -150,6 +153,24 @@ public class IconicFontDrawable extends Drawable {
         invalidateSelf();
     }
 
+    /**
+     * Set intrinsic width, which is used by several controls.
+     *
+     * @param intrinsicWidth
+     */
+    public void setIntrinsicWidth(int intrinsicWidth) {
+        mIntrinsicWidth = intrinsicWidth;
+    }
+
+    /**
+     * Set intrinsic height, which is used by several controls.
+     *
+     * @param intrinsicHeight
+     */
+    public void setIntrinsicHeight(int intrinsicHeight) {
+        mIntrinsicHeight = intrinsicHeight;
+    }
+
     @Override
     public void draw(Canvas canvas) {
         if (mIcon != null) {
@@ -167,6 +188,16 @@ public class IconicFontDrawable extends Drawable {
 
             canvas.drawPath(mPath, mIconPaint);
         }
+    }
+
+    @Override
+    public int getIntrinsicWidth() {
+        return mIntrinsicWidth;
+    }
+
+    @Override
+    public int getIntrinsicHeight() {
+        return mIntrinsicHeight;
     }
 
     @Override
