@@ -139,10 +139,10 @@ public class IconicFontDrawable extends Drawable {
     /**
      * Enable/disable contour drawing.
      *
-     * @param drawStroke
+     * @param drawContour
      */
-    public void drawContour(boolean drawStroke) {
-        mDrawContour = drawStroke;
+    public void drawContour(boolean drawContour) {
+        mDrawContour = drawContour;
 
         if (mDrawContour) {
             mIconPadding += mContourWidth;
