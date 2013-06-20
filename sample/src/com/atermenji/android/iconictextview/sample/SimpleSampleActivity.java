@@ -70,7 +70,13 @@ public class SimpleSampleActivity extends Activity {
 
     private void initSimpleSample() {
         mIconicFontDrawable = new IconicFontDrawable(this);
-        mIconView.setBackground(mIconicFontDrawable);
+        int sdk = android.os.Build.VERSION.SDK_INT;
+        if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            mIconView.setBackgroundDrawable(mIconicFontDrawable);
+        } else {
+        	mIconView.setBackground(mIconicFontDrawable);
+        }
+        
 
         if (mIcon != null) {
             mIconicFontDrawable.setIcon(mIcon);
