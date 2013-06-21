@@ -112,12 +112,8 @@ public class SimpleSampleActivity extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 if (!firstSelect) {
                     Icon icon = adapter.getItem(pos);
-
                     mIconicFontDrawable.setIcon(icon);
-                    mIconicFontDrawable.invalidateSelf();
-
                     mIconicFontDrawableButton.setIcon(icon);
-                    mIconicFontDrawableButton.invalidateSelf();
                 } else {
                     firstSelect = false;
                 }
