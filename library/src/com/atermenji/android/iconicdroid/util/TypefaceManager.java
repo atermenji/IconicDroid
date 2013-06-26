@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.atermenji.android.iconictextview.util;
+package com.atermenji.android.iconicdroid.util;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -27,7 +27,7 @@ import android.content.res.Resources.NotFoundException;
 import android.graphics.Typeface;
 import android.util.Log;
 
-import com.atermenji.android.iconictextview.R;
+import com.atermenji.android.iconicdroid.R;
 
 /**
  * Helper class that wraps icon fonts and manages {@link Typeface} loading.

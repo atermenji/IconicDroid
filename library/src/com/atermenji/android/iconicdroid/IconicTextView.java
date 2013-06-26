@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.atermenji.android.iconictextview;
+package com.atermenji.android.iconicdroid;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.atermenji.android.iconictextview.icon.Icon;
+import com.atermenji.android.iconicdroid.icon.Icon;
 
 /**
  * A custom {@link TextView} which can display icons from icon fonts. 

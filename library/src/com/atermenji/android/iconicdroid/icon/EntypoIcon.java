@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.atermenji.android.iconictextview.icon;
+package com.atermenji.android.iconicdroid.icon;
 
-import com.atermenji.android.iconictextview.util.TypefaceManager.IconicTypeface;
+import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypeface;
 
 /**
  * A wrapper for Entypo icon font (http://www.entypo.com). 

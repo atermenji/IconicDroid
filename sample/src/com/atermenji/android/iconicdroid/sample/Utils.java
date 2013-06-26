@@ -1,4 +1,4 @@
-package com.atermenji.android.iconictextview.sample;
+package com.atermenji.android.iconicdroid.sample;
 
 import java.util.Random;
 

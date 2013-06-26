@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.atermenji.android.iconictextview.sample"
+	package="com.atermenji.android.iconicdroid.sample"
 	android:versionCode="1"
 	android:versionName="1.0" >
 
@@ -14,7 +14,7 @@
 		android:theme="@style/AppTheme" >
 
 		<activity
-			android:name="com.atermenji.android.iconictextview.sample.MainActivity"
+			android:name="com.atermenji.android.iconicdroid.sample.MainActivity"
 			android:label="@string/app_name" >
 
 			<intent-filter>
@@ -25,11 +25,11 @@
 		</activity>
 
 		<activity
-			android:name="com.atermenji.android.iconictextview.sample.TypefaceSampleActivity"
+			android:name="com.atermenji.android.iconicdroid.sample.TypefaceSampleActivity"
 			android:label="@string/app_name" />
 
 		<activity
-			android:name="com.atermenji.android.iconictextview.sample.SimpleSampleActivity"
+			android:name="com.atermenji.android.iconicdroid.sample.SimpleSampleActivity"
 			android:label="@string/title_simple_sample"
 			android:screenOrientation="portrait" />
 

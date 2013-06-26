@@ -1,4 +1,4 @@
-package com.atermenji.android.iconictextview.sample;
+package com.atermenji.android.iconicdroid.sample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,13 +15,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.atermenji.android.iconictextview.IconicFontDrawable;
-import com.atermenji.android.iconictextview.IconicTextView;
-import com.atermenji.android.iconictextview.icon.EntypoIcon;
-import com.atermenji.android.iconictextview.icon.EntypoSocialIcon;
-import com.atermenji.android.iconictextview.icon.FontAwesomeIcon;
-import com.atermenji.android.iconictextview.icon.Icon;
-import com.atermenji.android.iconictextview.icon.IconicIcon;
+import com.atermenji.android.iconicdroid.IconicFontDrawable;
+import com.atermenji.android.iconicdroid.icon.EntypoIcon;
+import com.atermenji.android.iconicdroid.icon.EntypoSocialIcon;
+import com.atermenji.android.iconicdroid.icon.FontAwesomeIcon;
+import com.atermenji.android.iconicdroid.icon.Icon;
+import com.atermenji.android.iconicdroid.icon.IconicIcon;
 
 public class TypefaceSampleActivity extends ListActivity {
     

@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.atermenji.android.iconictextview.icon;
+package com.atermenji.android.iconicdroid.icon;
 
 import android.graphics.Typeface;
 
-import com.atermenji.android.iconictextview.util.TypefaceManager.IconicTypeface;
+import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypeface;
 
 import java.io.Serializable;
 
