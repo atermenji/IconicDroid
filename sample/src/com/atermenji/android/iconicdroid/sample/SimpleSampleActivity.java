@@ -92,12 +92,6 @@ public class SimpleSampleActivity extends Activity {
         mChangeColorButton.setCompoundDrawablesWithIntrinsicBounds(
                 mIconicFontDrawableButton, null, null, null);
 
-        if (mIcon != null) {
-            mIconicFontDrawable.setIcon(mIcon);
-            mIconicFontDrawableButton.setIcon(mIcon);
-            firstSelect = true;
-        }
-
         List<Icon> icons = new ArrayList<Icon>();
         icons.addAll(Arrays.asList(EntypoIcon.values()));
         icons.addAll(Arrays.asList(EntypoSocialIcon.values()));
@@ -108,6 +102,13 @@ public class SimpleSampleActivity extends Activity {
                 new ArrayAdapter<Icon>(this, android.R.layout.simple_spinner_item, icons);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mIconsSpinner.setAdapter(adapter);
+
+        if (mIcon != null) {
+            mIconicFontDrawable.setIcon(mIcon);
+            mIconicFontDrawableButton.setIcon(mIcon);
+            mIconsSpinner.setSelection(adapter.getPosition(mIcon));
+            firstSelect = true;
+        }
 
         mIconsSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
