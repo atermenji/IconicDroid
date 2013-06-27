@@ -21,6 +21,9 @@ import com.atermenji.android.iconicdroid.icon.FontAwesomeIcon;
 import com.atermenji.android.iconicdroid.icon.Icon;
 import com.atermenji.android.iconicdroid.icon.IconicIcon;
 
+import static android.os.Build.VERSION.SDK_INT;
+import static android.os.Build.VERSION_CODES.JELLY_BEAN;
+
 public class SimpleSampleActivity extends Activity {
 
     private static final int ICON_PADDING_MAX = 500;
@@ -80,8 +83,7 @@ public class SimpleSampleActivity extends Activity {
         mIconicFontDrawableButton.setIntrinsicWidth(BUTTON_ICON_INTRINSIC_WIDTH);
         mIconicFontDrawableButton.setIntrinsicHeight(BUTTON_ICON_INTRINSIC_HEIGHT);
 
-        int sdk = android.os.Build.VERSION.SDK_INT;
-        if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+        if (SDK_INT < JELLY_BEAN) {
             mIconView.setBackgroundDrawable(mIconicFontDrawable);
         } else {
             mIconView.setBackground(mIconicFontDrawable);
