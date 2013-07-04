@@ -3,7 +3,8 @@ package com.atermenji.android.iconicdroid.sample;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+import static android.os.Build.VERSION.SDK_INT;
+import static android.os.Build.VERSION_CODES.JELLY_BEAN;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
@@ -118,8 +119,11 @@ public class TypefaceSampleActivity extends ListActivity {
             IconicFontDrawable iconicFontDrawable = new IconicFontDrawable(getContext());
             iconicFontDrawable.setIcon(icon);
             iconicFontDrawable.setIconColor(Utils.randomColor());
-            holder.icon.setBackground(iconicFontDrawable);
-
+			if (SDK_INT < JELLY_BEAN) {
+				holder.icon.setBackgroundDrawable(iconicFontDrawable);
+			} else {
+				holder.icon.setBackground(iconicFontDrawable);
+			}
             return convertView;
         }
         
