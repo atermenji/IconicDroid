@@ -11,7 +11,7 @@
     <groupId>com.iconicdroid</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
-    <version>0.3.2</version>
+    <version>0.4.0</version>
 
     <name>IconicDroid (Parent)</name>
     <description>IconicDroid is a custom Android Drawable which allows to draw icons from several iconic fonts.</description>

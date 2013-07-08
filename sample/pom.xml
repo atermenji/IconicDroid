@@ -9,7 +9,7 @@
     <parent>
         <groupId>com.iconicdroid</groupId>
         <artifactId>parent</artifactId>
-        <version>0.3.2</version>
+        <version>0.4.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
