@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sample</artifactId>
+    <artifactId>iconicdroid-sample</artifactId>
     <name>IconicDroid Sample</name>
     <packaging>apk</packaging>
 
     <parent>
-        <groupId>com.iconicdroid</groupId>
-        <artifactId>parent</artifactId>
+        <groupId>com.github.atermenji</groupId>
+        <artifactId>iconicdroid-parent</artifactId>
         <version>0.4.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -21,8 +21,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.iconicdroid</groupId>
-            <artifactId>library</artifactId>
+            <groupId>com.github.atermenji</groupId>
+            <artifactId>iconicdroid</artifactId>
             <version>${project.version}</version>
             <type>apklib</type>
         </dependency>
