@@ -218,7 +218,7 @@ public class IconicFontDrawable extends Drawable {
     private void updateIcon(Icon icon) {
         mIcon = icon;
         mIconUtfChars = Character.toChars(icon.getIconUtfValue());
-        mIconPaint.setTypeface(mIcon.getIconicTypeface().getTypeface(mContext));
+        mIconPaint.setTypeface(mIcon.getTypeface(mContext));
     }
 
     private void updatePaddingBounds(Rect viewBounds) {

@@ -15,7 +15,10 @@
  */
 package com.atermenji.android.iconicdroid.icon;
 
-import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypeface;
+import android.content.Context;
+import android.graphics.Typeface;
+
+import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypefaceAsset;
 
 /**
  * A wrapper for Iconic icon font (http://somerandomdude.com/work/iconic/). 
@@ -181,8 +184,8 @@ public enum IconicIcon implements Icon {
     }
 
     @Override
-    public IconicTypeface getIconicTypeface() {
-        return IconicTypeface.ICONIC;
+    public Typeface getTypeface(final Context context) {
+        return IconicTypefaceAsset.ICONIC.getTypeface(context);
     }
 
     @Override

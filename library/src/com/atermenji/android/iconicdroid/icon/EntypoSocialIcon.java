@@ -15,7 +15,10 @@
  */
 package com.atermenji.android.iconicdroid.icon;
 
-import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypeface;
+import android.content.Context;
+import android.graphics.Typeface;
+
+import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypefaceRaw;
 
 /**
  * A wrapper for Entypo-Social icon font (http://www.entypo.com). 
@@ -76,8 +79,8 @@ public enum EntypoSocialIcon implements Icon {
     }
 
     @Override
-    public IconicTypeface getIconicTypeface() {
-        return IconicTypeface.ENTYPO_SOCIAL;
+    public Typeface getTypeface(final Context context) {
+        return IconicTypefaceRaw.ENTYPO_SOCIAL.getTypeface(context);
     }
 
     @Override
