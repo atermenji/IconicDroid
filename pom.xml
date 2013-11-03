@@ -112,7 +112,7 @@
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>2.6</version>
                     <configuration>
-                        <failsOnError>true</failsOnError>
+                        <failsOnError>false</failsOnError>
                     </configuration>
                 </plugin>
             </plugins>
