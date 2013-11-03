@@ -1,4 +1,4 @@
-## IconicDroid
+## IconicDroid [![Build Status](https://travis-ci.org/atermenji/IconicDroid.png)](https://travis-ci.org/atermenji/IconicDroid)
 
 IconicDroid is a custom [Android Drawable](http://developer.android.com/reference/android/graphics/drawable/Drawable.html) which allows to draw icons from several iconic fonts.
 
