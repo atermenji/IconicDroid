@@ -36,3 +36,7 @@ findViewById(R.id.some_view).setBackground(iconicFontDrawable);
 
 **Note that all fonts have their own license.**
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/atermenji/iconicdroid/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
