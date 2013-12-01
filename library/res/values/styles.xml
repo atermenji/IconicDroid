@@ -1,0 +1,8 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="IconicFontButton" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="font">iconic</item>
+        <item name="iconPadding">8dp</item>
+    </style>
+</resources>
