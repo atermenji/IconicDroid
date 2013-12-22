@@ -20,6 +20,7 @@ import com.atermenji.android.iconicdroid.icon.EntypoSocialIcon;
 import com.atermenji.android.iconicdroid.icon.FontAwesomeIcon;
 import com.atermenji.android.iconicdroid.icon.Icon;
 import com.atermenji.android.iconicdroid.icon.IconicIcon;
+import com.atermenji.android.iconicdroid.icon.WebHostingHubGlyphsIcon;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.JELLY_BEAN;
@@ -97,6 +98,8 @@ public class SimpleSampleActivity extends Activity {
         icons.addAll(Arrays.asList(EntypoSocialIcon.values()));
         icons.addAll(Arrays.asList(FontAwesomeIcon.values()));
         icons.addAll(Arrays.asList(IconicIcon.values()));
+        icons.addAll((Arrays.asList(WebHostingHubGlyphsIcon.values())));
+
 
         final ArrayAdapter<Icon> adapter =
                 new ArrayAdapter<Icon>(this, android.R.layout.simple_spinner_item, icons);

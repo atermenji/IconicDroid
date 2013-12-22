@@ -59,6 +59,14 @@ public class MainActivity extends ListActivity {
                         TypefaceSampleActivity.ICON_TYPE_ICONIC));
             }
         }));
+        sampleItems.add(new SampleItem("WebHostingHub Glyphs icons", new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(TypefaceSampleActivity.createIntent(MainActivity.this,
+                        TypefaceSampleActivity.ICON_TYPE_WHHG));
+            }
+        }));
+
 
         SamplesAdapter adapter = new SamplesAdapter(this, sampleItems);
         getListView().setAdapter(adapter);
