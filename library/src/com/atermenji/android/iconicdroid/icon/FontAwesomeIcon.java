@@ -15,6 +15,7 @@
  */
 package com.atermenji.android.iconicdroid.icon;
 
+import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicDroidTypefaces;
 import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypeface;
 
 /**
@@ -280,7 +281,7 @@ public enum FontAwesomeIcon implements Icon {
 
     @Override
     public IconicTypeface getIconicTypeface() {
-        return IconicTypeface.FONT_AWESOME;
+        return IconicDroidTypefaces.FONT_AWESOME;
     }
 
     @Override

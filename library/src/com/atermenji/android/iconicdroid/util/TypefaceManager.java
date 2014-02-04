@@ -38,8 +38,20 @@ public class TypefaceManager {
 
     private TypefaceManager() {
     }
+    
+    public static interface IconicTypeface {
 
-    public enum IconicTypeface {
+        /**
+         * Loads a {@link Typeface} for the given icon font. 
+         * {@link Typeface} is loaded only once to avoid memory consumption.
+         * 
+         * @param context
+         * @return {@link Typeface}
+         */
+        public Typeface getTypeface(final Context context);
+    }
+
+    public static enum IconicDroidTypefaces implements IconicTypeface {
 
         ENTYPO(R.raw.entypo), 
         ENTYPO_SOCIAL(R.raw.entypo_social),
@@ -49,17 +61,10 @@ public class TypefaceManager {
         private final int mTypefaceResourceId;
         private Typeface mTypeface;
 
-        private IconicTypeface(int typefaceResourceId) {
+        private IconicDroidTypefaces(int typefaceResourceId) {
             mTypefaceResourceId = typefaceResourceId;
         }
 
-        /**
-         * Loads a {@link Typeface} for the given icon font. 
-         * {@link Typeface} is loaded only once to avoid memory consumption.
-         * 
-         * @param context
-         * @return {@link Typeface}
-         */
         public Typeface getTypeface(final Context context) {
             if (mTypeface == null) {
                 mTypeface = createTypefaceFromResource(context, mTypefaceResourceId);
@@ -69,7 +74,7 @@ public class TypefaceManager {
         }
     }
 
-    private static Typeface createTypefaceFromResource(final Context context, final int resource) {
+    public static Typeface createTypefaceFromResource(final Context context, final int resource) {
         Typeface typeface = null;
         InputStream inputStream = null;
         OutputStream outputStream = null;

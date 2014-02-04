@@ -15,6 +15,7 @@
  */
 package com.atermenji.android.iconicdroid.icon;
 
+import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicDroidTypefaces;
 import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypeface;
 
 /**
@@ -182,7 +183,7 @@ public enum IconicIcon implements Icon {
 
     @Override
     public IconicTypeface getIconicTypeface() {
-        return IconicTypeface.ICONIC;
+        return IconicDroidTypefaces.ICONIC;
     }
 
     @Override
