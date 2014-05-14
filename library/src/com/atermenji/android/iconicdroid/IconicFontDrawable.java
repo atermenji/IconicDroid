@@ -248,6 +248,8 @@ public class IconicFontDrawable extends Drawable {
 
         mIconPaint.setTextSize(textSize);
 
+        mPath.reset();		// hack for Kindle HDX
+        
         mIconPaint.getTextPath(mIconUtfChars, 0, mIconUtfChars.length,
                 0, viewBounds.height(), mPath);
         mPath.computeBounds(mPathBounds, true);
