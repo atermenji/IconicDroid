@@ -29,6 +29,7 @@ findViewById(R.id.some_view).setBackground(iconicFontDrawable);
  - Entypo pictograms by Daniel Bruce — www.entypo.com
  - FontAwesome by Dave Gandy - http://fortawesome.github.com/Font-Awesome/
  - Iconic font by P.J. Onori - http://somerandomdude.com/work/iconic/
+ - Glyph Icon Font from WebHostingHub - http://www.webhostinghub.com/glyphs/
 
 ## License
 
