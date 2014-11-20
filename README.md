@@ -1,4 +1,4 @@
-## IconicDroid [![Build Status](https://travis-ci.org/atermenji/IconicDroid.png)](https://travis-ci.org/atermenji/IconicDroid)
+## IconicDroid [![Build Status](https://travis-ci.org/atermenji/IconicDroid.png)](https://travis-ci.org/atermenji/IconicDroid) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-IconicDroid-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1150)
 
 IconicDroid is a custom [Android Drawable](http://developer.android.com/reference/android/graphics/drawable/Drawable.html) which allows to draw icons from several iconic fonts.
 
@@ -35,8 +35,3 @@ findViewById(R.id.some_view).setBackground(iconicFontDrawable);
 * [Apache Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 **Note that all fonts have their own license.**
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/atermenji/iconicdroid/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
