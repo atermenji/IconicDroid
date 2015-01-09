@@ -44,7 +44,9 @@ public class TypefaceManager {
         ENTYPO(R.raw.entypo), 
         ENTYPO_SOCIAL(R.raw.entypo_social),
         FONT_AWESOME(R.raw.font_awesome),
-        ICONIC(R.raw.iconic);
+        ICONIC(R.raw.iconic),
+        WHHG (R.raw.webhostinghub_glyphs);
+
 
         private final int mTypefaceResourceId;
         private Typeface mTypeface;

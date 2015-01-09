@@ -22,6 +22,7 @@ import com.atermenji.android.iconicdroid.icon.EntypoSocialIcon;
 import com.atermenji.android.iconicdroid.icon.FontAwesomeIcon;
 import com.atermenji.android.iconicdroid.icon.Icon;
 import com.atermenji.android.iconicdroid.icon.IconicIcon;
+import com.atermenji.android.iconicdroid.icon.WebHostingHubGlyphsIcon;
 
 public class TypefaceSampleActivity extends ListActivity {
     
@@ -31,6 +32,8 @@ public class TypefaceSampleActivity extends ListActivity {
     public static final int ICON_TYPE_ENTYPO_SOCIAL = 1002;
     public static final int ICON_TYPE_FONT_AWESOME = 1003;
     public static final int ICON_TYPE_ICONIC = 1004;
+    public static final int ICON_TYPE_WHHG = 1005;
+
 
     private SampleIconsAdapter mAdapter;
 
@@ -80,6 +83,12 @@ public class TypefaceSampleActivity extends ListActivity {
                 setTitle("Iconic");
                 break;
             }
+            case ICON_TYPE_WHHG: {
+                valuesArray = WebHostingHubGlyphsIcon.values();
+                setTitle("Webhostinghub-glyphs");
+                break;
+            }
+
         }
         
         values.addAll(Arrays.asList(valuesArray));
