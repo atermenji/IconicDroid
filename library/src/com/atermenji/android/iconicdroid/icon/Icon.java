@@ -15,9 +15,8 @@
  */
 package com.atermenji.android.iconicdroid.icon;
 
+import android.content.Context;
 import android.graphics.Typeface;
-
-import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypeface;
 
 import java.io.Serializable;
 
@@ -29,9 +28,10 @@ public interface Icon extends Serializable {
     /**
      * Gets a {@link Typeface} for an Icon.
      * 
-     * @return {@link IconicTypeface}
+     * @param context
+     * @return {@link Typeface}
      */
-    public IconicTypeface getIconicTypeface();
+    public Typeface getTypeface(final Context context);
 
     /**
      * Returns UTF value of an Icon.

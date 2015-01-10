@@ -39,17 +39,16 @@ public class TypefaceManager {
     private TypefaceManager() {
     }
 
-    public enum IconicTypeface {
+    public enum IconicTypefaceRaw {
 
         ENTYPO(R.raw.entypo), 
         ENTYPO_SOCIAL(R.raw.entypo_social),
-        FONT_AWESOME(R.raw.font_awesome),
-        ICONIC(R.raw.iconic);
+        FONT_AWESOME(R.raw.font_awesome);
 
         private final int mTypefaceResourceId;
         private Typeface mTypeface;
 
-        private IconicTypeface(int typefaceResourceId) {
+        private IconicTypefaceRaw(int typefaceResourceId) {
             mTypefaceResourceId = typefaceResourceId;
         }
 
@@ -63,6 +62,33 @@ public class TypefaceManager {
         public Typeface getTypeface(final Context context) {
             if (mTypeface == null) {
                 mTypeface = createTypefaceFromResource(context, mTypefaceResourceId);
+            }
+
+            return mTypeface;
+        }
+    }
+
+    public enum IconicTypefaceAsset {
+
+        ICONIC("iconic.ttf");
+
+        private final String mTypefaceAssetName;
+        private Typeface mTypeface;
+
+        private IconicTypefaceAsset(final String typefaceAssetName) {
+            mTypefaceAssetName = typefaceAssetName;
+        }
+
+        /**
+         * Loads a {@link Typeface} for the given icon font. 
+         * {@link Typeface} is loaded only once to avoid memory consumption.
+         * 
+         * @param context
+         * @return {@link Typeface}
+         */
+        public Typeface getTypeface(final Context context) {
+            if (mTypeface == null) {
+                mTypeface = createTypefaceFromAsset(context, mTypefaceAssetName);
             }
 
             return mTypeface;
@@ -107,6 +133,18 @@ public class TypefaceManager {
             } catch (IOException ex) {
                 Log.e(TAG, "Error closing typeface streams.", ex);
             }
+        }
+
+        return typeface;
+    }
+
+    private static Typeface createTypefaceFromAsset(final Context context, final String assetName) {
+        Typeface typeface = null;
+
+        try {
+            typeface = Typeface.createFromAsset(context.getAssets(), assetName);
+        } catch (Exception ex) {
+            Log.e(TAG, "Could not load typeface from assets.", ex);
         }
 
         return typeface;

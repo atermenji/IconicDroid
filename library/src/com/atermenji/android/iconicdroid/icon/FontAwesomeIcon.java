@@ -15,7 +15,10 @@
  */
 package com.atermenji.android.iconicdroid.icon;
 
-import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypeface;
+import android.content.Context;
+import android.graphics.Typeface;
+
+import com.atermenji.android.iconicdroid.util.TypefaceManager.IconicTypefaceRaw;
 
 /**
  * A wrapper for Font Awesome icon font (http://fortawesome.github.com/Font-Awesome/). 
@@ -279,8 +282,8 @@ public enum FontAwesomeIcon implements Icon {
     }
 
     @Override
-    public IconicTypeface getIconicTypeface() {
-        return IconicTypeface.FONT_AWESOME;
+    public Typeface getTypeface(final Context context) {
+        return IconicTypefaceRaw.FONT_AWESOME.getTypeface(context);
     }
 
     @Override
