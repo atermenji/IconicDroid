@@ -1,0 +1,16 @@
+<resources>
+    <declare-styleable name="IconicFontButton">
+        <attr name="font"> <!-- Values must match IconFontButton.FontIdx. -->
+            <!-- TODO: support "sys". It's useful to provide the option to use
+                       the default system font for drawing letters. We should
+                       also consider packaging in Roboto. -->
+            <enum name="sys"     value="0" /> <!-- Don't override typeface attribute. -->
+            <enum name="iconic"  value="1" />
+            <enum name="awesome" value="2" />
+            <enum name="entypo"  value="3" />
+            <enum name="social"  value="4" />
+        </attr>
+        <attr name="iconPadding" format="dimension" />
+        <attr name="iconUtf" format="string" />
+    </declare-styleable>
+</resources>
